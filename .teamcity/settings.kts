@@ -1,7 +1,9 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.jiraCloudIntegration
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.SSHUpload
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.buildSteps.sshUpload
 import jetbrains.buildServer.configs.kotlin.projectFeatures.jira
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
@@ -93,6 +95,19 @@ object Deploy : BuildType({
 
     vcs {
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
+    }
+
+    steps {
+        sshUpload {
+            id = "ssh_deploy_runner"
+            transportProtocol = SSHUpload.TransportProtocol.SCP
+            sourcePath = "target/*.jar => package"
+            targetUrl = "1.92.88.120:/root"
+            authMethod = uploadedKey {
+                username = "root"
+                passphrase = "credentialsJSON:3ec89384-2735-4900-99d2-45d0162f3f0e"
+            }
+        }
     }
 
     features {
