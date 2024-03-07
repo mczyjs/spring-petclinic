@@ -4,6 +4,7 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.projectFeatures.jira
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -31,7 +32,10 @@ version = "2023.11"
 
 project {
 
+    vcsRoot(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
+
     buildType(Build)
+    buildType(Deploy)
 
     features {
         jira {
@@ -81,5 +85,34 @@ object Build : BuildType({
         jiraCloudIntegration {
             issueTrackerConnectionId = "PROJECT_EXT_7"
         }
+    }
+})
+
+object Deploy : BuildType({
+    name = "Deploy"
+
+    vcs {
+        root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
+object HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1 : GitVcsRoot({
+    name = "https://github.com/mczyjs/spring-petclinic#refs/heads/main (1)"
+    url = "https://github.com/mczyjs/spring-petclinic"
+    branch = "refs/heads/main"
+    branchSpec = "refs/heads/*"
+    authMethod = password {
+        userName = "mczyjs"
+        password = "credentialsJSON:ef0ab93d-a247-4fbb-bc3e-090e05878bfb"
     }
 })
