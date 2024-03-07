@@ -106,6 +106,9 @@ object Build : BuildType({
 object Deploy : BuildType({
     name = "Build"
 
+    artifactRules = "target/*.jar"
+    publishArtifacts = PublishMode.SUCCESSFUL
+
     vcs {
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
     }
