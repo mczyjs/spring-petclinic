@@ -111,6 +111,8 @@ object Deploy : BuildType({
 
     vcs {
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
+
+        cleanCheckout = true
     }
 
     steps {
