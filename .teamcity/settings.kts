@@ -54,7 +54,7 @@ project {
 }
 
 object Build : BuildType({
-    name = "Build"
+    name = "Deploy to cloud"
 
     artifactRules = "target/*.jar"
     publishArtifacts = PublishMode.SUCCESSFUL
