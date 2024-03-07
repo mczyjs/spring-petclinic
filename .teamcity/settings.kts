@@ -1,8 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
 import jetbrains.buildServer.configs.kotlin.buildFeatures.jiraCloudIntegration
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
-import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.buildSteps.SSHUpload
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.sshUpload
@@ -134,16 +132,6 @@ object Deploy : BuildType({
 
     features {
         perfmon {
-        }
-        pullRequests {
-            vcsRootExtId = "${HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1.id}"
-            provider = github {
-                serverUrl = "https://github.com/mczyjs/spring-petclinic"
-                authType = token {
-                    token = "credentialsJSON:35146438-49bd-4523-80f8-70d93c489c4d"
-                }
-                filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
-            }
         }
     }
 })
