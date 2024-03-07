@@ -138,7 +138,6 @@ object Deploy : BuildType({
         pullRequests {
             vcsRootExtId = "${HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1.id}"
             provider = github {
-                serverUrl = "https://github.com/"
                 authType = token {
                     token = "credentialsJSON:ae8e6144-d08e-4c00-9053-80794a30c60a"
                 }
