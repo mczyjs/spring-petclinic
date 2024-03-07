@@ -4,6 +4,7 @@ import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.SSHUpload
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.sshUpload
+import jetbrains.buildServer.configs.kotlin.projectFeatures.githubAppConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.jira
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
@@ -49,6 +50,16 @@ project {
             projectKeys = "SPN"
             cloudClientID = "awNqC8oK0J7BzqcNAV1yC1BsPIPKv2NE"
             cloudSecret = "credentialsJSON:835e9f4d-84db-44d1-8b61-6f786b126441"
+        }
+        githubAppConnection {
+            id = "PROJECT_EXT_9"
+            displayName = "TeamCity-0"
+            appId = "851161"
+            clientId = "Iv1.634bd7d676b11701"
+            clientSecret = "credentialsJSON:9179203d-3eec-4e19-9554-0bc89a766bc4"
+            privateKey = "credentialsJSON:3190122b-e1e8-45a1-a075-1e214f7a295d"
+            webhookSecret = "credentialsJSON:a9c97809-3ae8-4fbc-8959-d1e0b8cef0b8"
+            ownerUrl = "https://github.com/mczyjs"
         }
     }
 }
