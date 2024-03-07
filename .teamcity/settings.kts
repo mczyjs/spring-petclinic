@@ -123,6 +123,7 @@ object Build : BuildType({
     dependencies {
         snapshot(Deploy) {
             runOnSameAgent = true
+            reuseBuilds = ReuseBuilds.NO
         }
     }
 })
