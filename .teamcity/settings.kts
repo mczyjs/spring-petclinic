@@ -122,6 +122,12 @@ object Deploy : BuildType({
         }
     }
 
+    triggers {
+        vcs {
+            triggerRules = "-:.teamcity/**"
+        }
+    }
+
     features {
         perfmon {
         }
