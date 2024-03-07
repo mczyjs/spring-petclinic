@@ -56,7 +56,10 @@ project {
 object Build : BuildType({
     name = "Deploy to cloud"
 
+    enablePersonalBuilds = false
     artifactRules = "target/*.jar"
+    type = BuildTypeSettings.Type.DEPLOYMENT
+    maxRunningBuilds = 1
     publishArtifacts = PublishMode.SUCCESSFUL
 
     vcs {
