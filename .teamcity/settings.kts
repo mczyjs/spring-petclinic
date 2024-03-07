@@ -113,6 +113,15 @@ object Deploy : BuildType({
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
     }
 
+    steps {
+        maven {
+            id = "Maven2"
+            goals = "clean package"
+            runnerArgs = "-Dmaven.test.failure.ignore=true"
+            jdkHome = "%env.JDK_17_0_x64%"
+        }
+    }
+
     features {
         perfmon {
         }
