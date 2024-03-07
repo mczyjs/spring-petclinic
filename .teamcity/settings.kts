@@ -50,6 +50,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    publishArtifacts = PublishMode.SUCCESSFUL
+
     vcs {
         root(DslContext.settingsRoot)
     }
