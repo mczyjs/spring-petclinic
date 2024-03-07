@@ -50,6 +50,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "target/*"
     publishArtifacts = PublishMode.SUCCESSFUL
 
     vcs {
