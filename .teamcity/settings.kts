@@ -145,6 +145,16 @@ object Deploy : BuildType({
                 filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
             }
         }
+        feature {
+            type = ""
+            param("oauthProviderId", "PROJECT_EXT_11")
+            param("filterAuthorRole", "MEMBER")
+            param("oauthUser", "mczyjs")
+            param("vcsRootId", "SpringPetclinic_HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1")
+            param("authenticationType", "token")
+            param("providerType", "github")
+            param("secure:accessToken", "credentialsJSON:79d1f49b-f19c-4e2d-896b-fe83bfb44e65")
+        }
     }
 })
 
