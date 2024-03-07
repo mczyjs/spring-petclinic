@@ -107,19 +107,6 @@ object Deploy : BuildType({
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
     }
 
-    steps {
-        sshUpload {
-            id = "ssh_deploy_runner"
-            transportProtocol = SSHUpload.TransportProtocol.SCP
-            sourcePath = "target/*.jar"
-            targetUrl = "1.92.88.210:/root"
-            authMethod = password {
-                username = "root"
-                password = "credentialsJSON:3ec89384-2735-4900-99d2-45d0162f3f0e"
-            }
-        }
-    }
-
     features {
         perfmon {
         }
