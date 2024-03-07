@@ -43,10 +43,6 @@ project {
     buildType(Build)
     buildType(Deploy)
 
-    params {
-        param("system.huaweicloud.access.key", "ewXEWkhyRYYuHyPwECEJUgj6d1NtsVzBl4zIYt5j")
-    }
-
     features {
         jira {
             id = "PROJECT_EXT_7"
