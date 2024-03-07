@@ -119,6 +119,11 @@ object Build : BuildType({
             issueTrackerConnectionId = "PROJECT_EXT_7"
         }
     }
+
+    dependencies {
+        snapshot(Deploy) {
+        }
+    }
 })
 
 object Deploy : BuildType({
