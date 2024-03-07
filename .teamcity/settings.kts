@@ -103,9 +103,9 @@ object Deploy : BuildType({
             transportProtocol = SSHUpload.TransportProtocol.SCP
             sourcePath = "target/*.jar => package"
             targetUrl = "1.92.88.120:/root"
-            authMethod = uploadedKey {
+            authMethod = password {
                 username = "root"
-                passphrase = "credentialsJSON:3ec89384-2735-4900-99d2-45d0162f3f0e"
+                password = "credentialsJSON:3ec89384-2735-4900-99d2-45d0162f3f0e"
             }
         }
     }
