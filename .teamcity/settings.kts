@@ -101,7 +101,7 @@ object Build : BuildType({
 })
 
 object Deploy : BuildType({
-    name = "Deploy"
+    name = "Build"
 
     vcs {
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
