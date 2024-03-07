@@ -95,11 +95,6 @@ object Deploy : BuildType({
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
     }
 
-    triggers {
-        vcs {
-        }
-    }
-
     features {
         perfmon {
         }
