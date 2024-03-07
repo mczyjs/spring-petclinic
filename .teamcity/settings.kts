@@ -116,7 +116,7 @@ object Deploy : BuildType({
     steps {
         maven {
             id = "Maven2"
-            goals = "clean package"
+            goals = "clean test package"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             jdkHome = "%env.JDK_17_0_x64%"
         }
