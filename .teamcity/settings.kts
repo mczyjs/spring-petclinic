@@ -139,7 +139,7 @@ object Deploy : BuildType({
             vcsRootExtId = "${HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1.id}"
             provider = github {
                 authType = token {
-                    token = "credentialsJSON:ae8e6144-d08e-4c00-9053-80794a30c60a"
+                    token = "credentialsJSON:24a69dbb-bb49-4471-955e-6e1be8b549a4"
                 }
                 filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
             }
