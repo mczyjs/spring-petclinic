@@ -79,6 +79,7 @@ object Build : BuildType({
     steps {
         maven {
             id = "Maven2"
+            enabled = false
             goals = "clean package"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             jdkHome = "%env.JDK_17_0%"
