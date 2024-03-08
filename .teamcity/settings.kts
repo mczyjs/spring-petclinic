@@ -96,10 +96,7 @@ object Build : BuildType({
 
     triggers {
         vcs {
-            triggerRules = """
-                -:.teamcity/**
-                -:**.kts
-            """.trimIndent()
+            triggerRules = "-:.teamcity/**"
         }
     }
 
