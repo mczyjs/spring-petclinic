@@ -174,9 +174,8 @@ object Deploy : BuildType({
             vcsRootExtId = "${HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1.id}"
             publisher = github {
                 githubUrl = "https://api.github.com"
-                authType = password {
-                    userName = "mczyjs"
-                    password = "credentialsJSON:3ec89384-2735-4900-99d2-45d0162f3f0e"
+                authType = personalToken {
+                    token = "credentialsJSON:e97fd1e1-0c84-4a08-844d-c62a1a00cbff"
                 }
             }
         }
