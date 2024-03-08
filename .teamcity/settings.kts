@@ -144,10 +144,7 @@ object Deploy : BuildType({
 
     triggers {
         vcs {
-            triggerRules = """
-                -:.teamcity/**
-                -:.teamcity/settings.kts
-            """.trimIndent()
+            triggerRules = "-:.teamcity/**"
         }
     }
 
