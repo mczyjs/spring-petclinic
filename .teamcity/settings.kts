@@ -154,6 +154,7 @@ object Deploy : BuildType({
 
     features {
         perfmon {
+            enabled = false
         }
         pullRequests {
             vcsRootExtId = "${HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1.id}"
