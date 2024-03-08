@@ -164,6 +164,7 @@ object Deploy : BuildType({
             }
         }
         commitStatusPublisher {
+            vcsRootExtId = "${HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1.id}"
             publisher = github {
                 githubUrl = "https://api.github.com"
                 authType = personalToken {
