@@ -117,9 +117,15 @@ object Build : BuildType({
     }
 
     dependencies {
-        snapshot(Deploy) {
-            runOnSameAgent = true
-            reuseBuilds = ReuseBuilds.NO
+        dependency(Deploy) {
+            snapshot {
+                runOnSameAgent = true
+                reuseBuilds = ReuseBuilds.NO
+            }
+
+            artifacts {
+                artifactRules = "spring-petclinic-3.2.0-SNAPSHOT.jar"
+            }
         }
     }
 })
