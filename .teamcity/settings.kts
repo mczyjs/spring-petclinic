@@ -74,13 +74,6 @@ object Build : BuildType({
     }
 
     steps {
-        maven {
-            id = "Maven2"
-            enabled = false
-            goals = "clean package"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-            jdkHome = "%env.JDK_17_0%"
-        }
         sshUpload {
             id = "ssh_deploy_runner"
             transportProtocol = SSHUpload.TransportProtocol.SCP
