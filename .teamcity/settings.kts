@@ -112,7 +112,6 @@ object Build : BuildType({
     dependencies {
         dependency(Deploy) {
             snapshot {
-                reuseBuilds = ReuseBuilds.NO
             }
 
             artifacts {
