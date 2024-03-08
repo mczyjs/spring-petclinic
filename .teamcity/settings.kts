@@ -135,6 +135,7 @@ object Deploy : BuildType({
         root(HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1)
 
         cleanCheckout = true
+        excludeDefaultBranchChanges = true
     }
 
     steps {
