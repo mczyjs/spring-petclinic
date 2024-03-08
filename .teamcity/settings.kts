@@ -180,7 +180,10 @@ object HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1 : GitVcsRoot({
     name = "https://github.com/mczyjs/spring-petclinic#refs/heads/main (1)"
     url = "https://github.com/mczyjs/spring-petclinic"
     branch = "refs/heads/main"
-    branchSpec = "+:refs/heads/main"
+    branchSpec = """
+        +:refs/heads/main
+        -:.teamcity/settings.kts
+    """.trimIndent()
     authMethod = password {
         userName = "mczyjs"
         password = "credentialsJSON:ef0ab93d-a247-4fbb-bc3e-090e05878bfb"
