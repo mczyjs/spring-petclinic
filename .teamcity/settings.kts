@@ -116,7 +116,7 @@ object Build : BuildType({
             }
 
             artifacts {
-                artifactRules = "spring-petclinic-3.2.0-SNAPSHOT.jar"
+                artifactRules = "spring-petclinic-*.jar"
             }
         }
     }
