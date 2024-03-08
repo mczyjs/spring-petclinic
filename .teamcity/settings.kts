@@ -97,6 +97,10 @@ object Build : BuildType({
     triggers {
         vcs {
             triggerRules = "-:.teamcity/**"
+            branchFilter = """
+                +:*
+                -:.teamcity/*
+            """.trimIndent()
         }
     }
 
