@@ -62,7 +62,6 @@ object Build : BuildType({
 
     enablePersonalBuilds = false
     artifactRules = "target/*.jar"
-    type = BuildTypeSettings.Type.DEPLOYMENT
     maxRunningBuilds = 1
     publishArtifacts = PublishMode.SUCCESSFUL
 
