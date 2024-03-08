@@ -85,7 +85,7 @@ object Build : BuildType({
         }
         sshExec {
             id = "ssh_exec_runner"
-            commands = "java -jar /root/target/*.jar"
+            commands = "java -jar /root/target/*.jar&"
             targetUrl = "1.92.88.210"
             authMethod = password {
                 username = "root"
