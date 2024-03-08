@@ -155,7 +155,6 @@ object Deploy : BuildType({
         perfmon {
         }
         pullRequests {
-            vcsRootExtId = "${HttpsGithubComMczyjsSpringPetclinicRefsHeadsMain1.id}"
             provider = github {
                 authType = token {
                     token = "credentialsJSON:24a69dbb-bb49-4471-955e-6e1be8b549a4"
