@@ -8,6 +8,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.SSHUpload
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.sshExec
 import jetbrains.buildServer.configs.kotlin.buildSteps.sshUpload
+import jetbrains.buildServer.configs.kotlin.projectFeatures.githubConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.jira
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
@@ -44,6 +45,12 @@ project {
     buildType(Deploy)
 
     features {
+        githubConnection {
+            id = "PROJECT_EXT_13"
+            displayName = "GitHub.com (1)"
+            clientId = "94d1ae2036aa502b52e7"
+            clientSecret = "credentialsJSON:1f8a8aa8-692e-427b-bfa4-5fb020fb24b2"
+        }
         jira {
             id = "PROJECT_EXT_7"
             displayName = "Demo"
