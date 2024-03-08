@@ -164,7 +164,6 @@ object Deploy : BuildType({
             }
         }
         commitStatusPublisher {
-            enabled = false
             publisher = github {
                 githubUrl = "https://api.github.com"
                 authType = personalToken {
