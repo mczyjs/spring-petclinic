@@ -76,7 +76,7 @@ object Build : BuildType({
         sshUpload {
             id = "ssh_deploy_runner"
             transportProtocol = SSHUpload.TransportProtocol.SCP
-            sourcePath = "target/*.jar"
+            sourcePath = "*.jar"
             targetUrl = "1.92.88.210:/root/target/"
             authMethod = password {
                 username = "root"
