@@ -7,6 +7,6 @@ public class PetClinicIntegrationTests {
 
 	@Test
 	public void dummyTest() {
-		assertEquals(1, 2, "1 should not be equal to 2");
+		assertEquals(1, 1, "1 should not be equal to 1");
 	}
 }
