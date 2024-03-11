@@ -2,6 +2,8 @@ package org.springframework.samples.petclinic;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportRuntimeHints;
 
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
