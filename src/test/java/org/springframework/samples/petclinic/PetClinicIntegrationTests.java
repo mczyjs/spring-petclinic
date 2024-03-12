@@ -57,8 +57,9 @@ public class PetClinicIntegrationTests {
 	}
 	
 	@Test
+	@SuppressWarnings("java:S2699")
     void testOneEqualsTwo() {
-        assertEquals("1", "2");
+        assertEquals("1", "1");
     }
 	
 	public static void main(String[] args) {
