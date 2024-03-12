@@ -57,7 +57,7 @@ public class PetClinicIntegrationTests {
 	}
 	
 	@Test
-    public void testOneEqualsTwo() {
+    void testOneEqualsTwo() {
         assertEquals("1", "2");
     }
 	
