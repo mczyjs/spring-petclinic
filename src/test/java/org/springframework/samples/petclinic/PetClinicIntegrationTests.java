@@ -50,7 +50,7 @@ public class PetClinicIntegrationTests {
 	}
 
 	@Test
-	void testOneEqualsTwo() {
+	void testOneEqualstwo() {
 		assertEquals("1", "2");
 	}
 	
